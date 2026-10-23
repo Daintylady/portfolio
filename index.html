@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faith Madu | Front-End Developer</title>
+<meta name="description" content="Front-end developer in Minna, Nigeria. I build fast, mobile-friendly web apps with React.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --surface:#f5f6f8; --ink:#171a21; --muted:#596070;
+  --line:#e2e5ea; --accent:#2347d9; --accent-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#12141a; --surface:#1b1e26; --ink:#eef0f4; --muted:#a3abba; --line:#2a2e38; --accent:#6f8cff; --accent-ink:#0d1020; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700;text-decoration:none}
+nav{display:flex;gap:20px}
+nav a{text-decoration:none;color:var(--muted);font-size:15px}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 56px}
+.hero h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}
+.hero .role{font-size:1.25rem;color:var(--accent);font-weight:500;margin-bottom:20px}
+.hero p{max-width:560px;color:var(--muted);font-size:1.1rem;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:500;text-decoration:none;border:1px solid var(--accent);font-size:16px}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{opacity:.88}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;letter-spacing:-.01em;margin-bottom:28px}
+.projects{display:grid;gap:32px}
+.project{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.shot{aspect-ratio:16/10;border-radius:10px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(135deg,var(--accent),#0f1f6b);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.6rem;position:relative}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.project h3{font-size:1.35rem;margin-bottom:8px}
+.project p{color:var(--muted);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-bottom:18px}
+.tags li{background:var(--surface);border:1px solid var(--line);padding:3px 11px;border-radius:999px;font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills p{color:var(--muted);font-size:16px}
+.about p{max-width:640px;color:var(--muted);margin-bottom:14px}
+.contact p{color:var(--muted);margin-bottom:22px;max-width:560px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:15px}
+@media (max-width:720px){
+  .project{grid-template-columns:1fr}
+  nav{gap:14px}
+  .hero{padding:48px 0 40px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Faith Madu</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Madu Faith Chinyere</h1>
+    <p class="role">Front-End Developer</p>
+    <p>I build fast, mobile-friendly web apps with React. I made Tally, a credit app for Nigerian traders, and I can build a clear, professional website for your business.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View my projects</a>
+      <a class="btn ghost" href="https://wa.me/2348186116836?text=Hello%20Faith%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <article class="project">
+          <div class="shot">Tally<img src="tally.png" alt="Tally dashboard showing total owed, overdue customers, and quick actions" onerror="this.remove()"></div>
+          <div>
+            <h3>Tally: Customer Credit Manager</h3>
+            <p>Helps small business traders record what customers owe, track payments, and keep their records safe in the cloud. It includes a dashboard, customer list, analytics, expenses, inventory, invoices, and staff access.</p>
+            <ul class="tags"><li>React</li><li>Vite</li><li>React Router</li><li>Supabase</li><li>Paystack</li><li>PWA</li></ul>
+            <a class="btn primary" href="https://tally-six-flame.vercel.app" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="shot">ShopHub<img src="shophub.png" alt="ShopHub home page with Shop Kids and Shop Adults buttons" onerror="this.remove()"></div>
+          <div>
+            <h3>ShopHub: Online Shopping Site</h3>
+            <p>A responsive store front with separate kids and adult sections, product categories, search, a wishlist, and a shopping cart. Built as a front-end project to show store design.</p>
+            <ul class="tags"><li>React</li><li>Vite</li><li>Responsive design</li></ul>
+            <a class="btn primary" href="https://shophub-kappa-eosin.vercel.app" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Front-end</h3><p>HTML, CSS, JavaScript, React, Vite, React Router, responsive design</p></div>
+        <div><h3>Services</h3><p>Supabase (database and login), Paystack payments, Progressive Web Apps</p></div>
+        <div><h3>Tools</h3><p>Git, GitHub, Vercel</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <p>I am a front-end developer based in Minna, Nigeria, with a B.Tech in Statistics from the Federal University of Technology, Minna.</p>
+      <p>I sell bags for a living, and keeping track of what customers owed me was a daily problem. That is why I built Tally. I like building tools that solve real problems for real people.</p>
+      <p>I am open to front-end roles and freelance projects.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Need a website or web app? Send me a message and I will reply as soon as I can.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/2348186116836?text=Hello%20Faith%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="mailto:faithmadu300@gmail.com">faithmadu300@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/daintylady" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Madu Faith Chinyere. Minna, Niger State, Nigeria.</div>
+</footer>
+</body>
+</html>
